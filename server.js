@@ -16,8 +16,8 @@ const express = require('express'),
     const usersRoutes = require('./routes/users.route');
 
     app.use(bodyParser.json());
-    app.use(cors());
-    const port = process.env.PORT || 4000;
+    app.use(cors()); 
+    const port = process.env.PORT || 4000; //8080 voor heroku ??
 
     app.use('/adunits', adUnitRoutes);
     app.use('/users', usersRoutes);
