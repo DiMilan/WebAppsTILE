@@ -20,13 +20,6 @@ export class AppPage {
     element(by.name('username')).sendKeys('test@test.com');
     element(by.name('password')).sendKeys('123456');
     element(by.name('signin')).click();
-    browser.wait(() => {
-      setTimeout(() => {
-        return true;
-      }, 2000);
-    }, 3000).then(() => {
-      return true;
-    })
   }
   fillItemName(name) {
     element(by.name('unit_name')).sendKeys(name);
